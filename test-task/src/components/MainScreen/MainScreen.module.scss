@@ -1,0 +1,35 @@
+@import "../../styles/mixins";
+
+.mainScreen {
+  @include containerPaddings;
+  min-height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: linear-gradient(0deg, rgba(0, 4, 19, 0.4), rgba(0, 4, 19, 0.4));
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    min-height: 340px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    border-radius: 8px;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    font-size: inherit;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    @media screen and (min-width: 768px) {
+      letter-spacing: 0.02em;
+    }
+  }
+}
