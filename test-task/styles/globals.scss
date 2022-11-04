@@ -1,8 +1,6 @@
-@import "./fontStyles.scss";
-@include fonts("OpenSans", OpenSans-Regular, 400);
-@include fonts("OpenSans", OpenSans-SemiBold, 600);
-@include fonts("OpenSans", OpenSans-Bold, 700);
-@include fonts("OpenSans", OpenSans-ExtraBold, 800);
+@import "../src/styles/variables";
+@import "../src/styles/mixins";
+@import "../src/styles/fontStyles.scss";
 
 html,
 body {
@@ -12,6 +10,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-family: OpenSans, sans-serif;
+  background-color: $bodyColor;
 }
 
 body * {

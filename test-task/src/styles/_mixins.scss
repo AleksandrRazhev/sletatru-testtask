@@ -1,0 +1,25 @@
+@import "./variables";
+
+@mixin fonts($fontFamily, $fontName, $fontWeight, $fontStyle: normal) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url("../fonts/" + $fontName + ".woff2") format("woff2"),
+      url("../fonts/" + $fontName + ".woff") format("woff");
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+    font-display: swap;
+  }
+}
+
+@mixin containerPaddings {
+  padding-left: $containerPadding320;
+  padding-right: $containerPadding320;
+  @media screen and (min-width: 768px) {
+    padding-left: $containerPadding800;
+    padding-right: $containerPadding800;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: $containerPadding1920;
+    padding-right: $containerPadding1920;
+  }
+}

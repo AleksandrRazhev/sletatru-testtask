@@ -1,0 +1,6 @@
+@import "./mixins";
+
+@include fonts("OpenSans", OpenSans-Regular, 400);
+@include fonts("OpenSans", OpenSans-SemiBold, 600);
+@include fonts("OpenSans", OpenSans-Bold, 700);
+@include fonts("OpenSans", OpenSans-ExtraBold, 800);

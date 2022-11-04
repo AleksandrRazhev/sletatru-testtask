@@ -10,8 +10,10 @@ export const Header: React.FC = (): JSX.Element => {
     <div className={style.header}>
       <Logo />
       <LogoMobile />
-      <Tel />
-      <Enter />
+      <div className={style.dropDown}>
+        <Tel />
+        <Enter />
+      </div>
       <Burger />
     </div>
   );

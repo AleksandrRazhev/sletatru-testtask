@@ -1,3 +1,19 @@
+@import "../../../styles/variables";
+
 .enter {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    color: $gold;
+    .button {
+      display: flex;
+      align-items: center;
+      color: inherit;
+      .buttonImg {
+        margin-right: 6px;
+      }
+      .buttonText {
+      }
+    }
+  }
 }
