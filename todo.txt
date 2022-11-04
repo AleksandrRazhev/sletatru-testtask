@@ -1,5 +1,6 @@
 слетать.ру
 	вакансия верстальщик
+	https://www.figma.com/file/ym4FgScf3tZKOk5cJWXLia/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5?node-id=0%3A1
 
 yarn next dev
 rsc	развернуть новый компонент
@@ -20,14 +21,15 @@ mobilefirst 320+
 	footer(frame 1639)
 		
 шрифты
-	Open Sans Regular (153)
-	Open Sans SemiBold(60)
-	Open Sans Bold(22)
-	Open Sans ExtraBold(3)
+	Open Sans Regular 400 (153)
+	Open Sans SemiBold 600 (60)
+	Open Sans Bold 700 (22)
+	Open Sans ExtraBold 800(3)
 	
 сделать favicon слетать.ру
 картинки с помощью компонента Image, ссылки с помощью компонента Link
-подключить шрифты
 Обязательно тег H1
+
+реализовать нажатие на бургер и разворачивание nav
 
 	
