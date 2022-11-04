@@ -1,0 +1,33 @@
+слетать.ру
+	вакансия верстальщик
+
+yarn next dev
+rsc	развернуть новый компонент
+yarn add sass
+
+	
+mobilefirst 320+
+	768+
+	1200+
+Схема	
+	Header
+		бургер
+		mobile navigation (nav)
+	mainScreen
+	booking
+		по желанию сделать валидацию полей
+	callMeBack
+	footer(frame 1639)
+		
+шрифты
+	Open Sans Regular (153)
+	Open Sans SemiBold(60)
+	Open Sans Bold(22)
+	Open Sans ExtraBold(3)
+	
+сделать favicon слетать.ру
+картинки с помощью компонента Image, ссылки с помощью компонента Link
+подключить шрифты
+Обязательно тег H1
+
+	
