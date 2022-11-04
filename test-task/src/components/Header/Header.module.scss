@@ -1,21 +1,23 @@
 @import "../../styles/mixins";
 
 .header {
+  @include containerPaddings;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: #3d95fb;
+  @media screen and (min-width: 768px) {
+    min-height: 74px;
+    background-color: inherit;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include containerPaddings;
   font-size: 14px;
-  line-height: 1.357;
-  background-color: #3d95fb;
-  @media screen and (min-width: 768px) {
-    background-color: inherit;
-  }
-}
-
-.dropDown {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: flex;
+  line-height: 19px;
+  .dropDown {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 }

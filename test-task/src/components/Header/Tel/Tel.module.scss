@@ -11,10 +11,16 @@
     display: flex;
     align-items: center;
     margin-right: 8px;
+    li:not(:first-child) {
+      display: none;
+    }
   }
   .button {
     display: flex;
     align-items: center;
     cursor: pointer;
   }
+}
+.list.active li {
+  display: block;
 }

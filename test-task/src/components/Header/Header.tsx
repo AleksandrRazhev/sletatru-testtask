@@ -7,7 +7,7 @@ import { Enter } from "./Enter/Enter";
 
 export const Header: React.FC = (): JSX.Element => {
   return (
-    <div className={style.header}>
+    <header className={style.header}>
       <Logo />
       <LogoMobile />
       <div className={style.dropDown}>
@@ -15,6 +15,6 @@ export const Header: React.FC = (): JSX.Element => {
         <Enter />
       </div>
       <Burger />
-    </div>
+    </header>
   );
 };
