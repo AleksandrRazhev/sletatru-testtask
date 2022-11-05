@@ -2,7 +2,7 @@
 @import "../../styles/mixins";
 
 .stickyTourInfo {
-  padding: 16px;
+  padding: 16px 16px 11px;
   display: grid;
   gap: 16px;
   background: #fff;
@@ -76,5 +76,13 @@
         font-size: 14px;
       }
     }
+  }
+  .button {
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    color: $lightBlue;
+    cursor: pointer;
   }
 }

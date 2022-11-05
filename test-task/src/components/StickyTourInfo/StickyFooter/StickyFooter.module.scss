@@ -1,0 +1,61 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.footer {
+  display: grid;
+  gap: 4px;
+  padding-top: 7px;
+  border-top: 1px solid $brandPaleBlue;
+
+  .priceTour {
+    min-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    .title {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $textDarkGrey;
+    }
+
+    .price {
+      display: flex;
+      gap: 4px;
+    }
+  }
+
+  .toPaid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    .titlePaid {
+      @include flexCenter;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $textDarkGrey;
+    }
+
+    .pricePaid {
+      @include flexCenter;
+      gap: 4px;
+    }
+
+    .ruble {
+      @include flexCenter;
+      svg {
+        width: 12px;
+        height: 24px;
+      }
+    }
+  }
+}

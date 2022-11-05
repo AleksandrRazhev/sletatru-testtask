@@ -30,7 +30,7 @@ mobilefirst 320+
 
 
 StickyTourInfo
-	
+	слишком большой компонент, надо разделить
 
 Не забыть box-shadow
 

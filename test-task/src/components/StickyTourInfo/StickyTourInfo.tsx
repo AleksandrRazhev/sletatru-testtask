@@ -3,6 +3,7 @@ import { Clock } from "../svg/Clock";
 import { Dog } from "../svg/Dog";
 import { Group } from "../svg/Group";
 import { MapPoint } from "../svg/MapPoint";
+import { StickyFooter } from "./StickyFooter/StickyFooter";
 import style from "./StickyTourInfo.module.scss";
 
 export const StickyTourInfo: React.FC = (): JSX.Element => {
@@ -40,9 +41,8 @@ export const StickyTourInfo: React.FC = (): JSX.Element => {
           <span>1 пес + 2 человека</span>
         </li>
       </ul>
-      <button>Ввести промокод</button>
-      <p>Стоимость тура</p>
-      <p>Итого к оплате</p>
+      <button className={style.button}>Ввести промокод</button>
+      <StickyFooter />
     </article>
   );
 };
