@@ -1,4 +1,14 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
 .booking {
-  .title {
+  @include containerPaddings;
+  .container {
+    height: 500px;
+    border-radius: $mainBorderRadius;
+    background-color: #fff;
+
+    .title {
+    }
   }
 }
