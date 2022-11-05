@@ -1,15 +1,20 @@
 import style from "./App.module.scss";
 import { Header } from "../Header/Header";
 import { MainScreen } from "../MainScreen/MainScreen";
+import { Booking } from "../Booking/Booking";
 
 export const App: React.FC = (): JSX.Element => {
   return (
     <div className={style.app}>
-      <Header />
-      <main>
+      <div>
+        <Header />
         <MainScreen />
+      </div>
+      <main className={style.main}>
+        <Booking />
+        <div style={{ backgroundColor: "red" }}>CallMe</div>
       </main>
-      <footer>footer</footer>
+      <footer style={{ backgroundColor: "red" }}>footer</footer>
     </div>
   );
 };
