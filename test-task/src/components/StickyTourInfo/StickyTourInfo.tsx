@@ -8,31 +8,36 @@ import style from "./StickyTourInfo.module.scss";
 export const StickyTourInfo: React.FC = (): JSX.Element => {
   return (
     <article className={style.stickyTourInfo}>
-      <div>
-        <span>Групповой</span>
-        <Dog />
+      <div className={style.filter}>
+        <span className={style.filterName}>Групповой</span>
+        <span className={style.filterImage}>
+          <Dog />
+        </span>
+        <span className={style.filterNumber}>10</span>
       </div>
-      <h2>Сёрф-тур для хороших мальчиков</h2>
-      <div>
-        <MapPoint />
-        <span>Аэропорт Хайнань</span>
-      </div>
-      <div>
-        <Clock />
-        <span>3 дня / 4 ночи</span>
-      </div>
-      <div>
-        <Calendar />
-        <span>31 сентября</span>
-        <span>Пн</span>
-        <span>—</span>
-        <span>5 ноября</span>
-        <span>Вс</span>
-      </div>
-      <div>
-        <Group />
-        <span>1 пес + 2 человека</span>
-      </div>
+      <h2 className={style.title}>Сёрф-тур для хороших мальчиков</h2>
+      <ul className={style.list}>
+        <li className={style.listItem}>
+          <MapPoint />
+          <span>Аэропорт Хайнань</span>
+        </li>
+        <li className={style.listItem}>
+          <Clock />
+          <span>3 дня / 4 ночи</span>
+        </li>
+        <li className={style.listItem}>
+          <Calendar />
+          <span>31 сентября</span>
+          <span>Пн</span>
+          <span>—</span>
+          <span>5 ноября</span>
+          <span>Вс</span>
+        </li>
+        <li className={style.listItem}>
+          <Group />
+          <span>1 пес + 2 человека</span>
+        </li>
+      </ul>
       <button>Ввести промокод</button>
       <p>Стоимость тура</p>
       <p>Итого к оплате</p>

@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .stickyTourInfo {
   padding: 16px;
@@ -8,4 +9,45 @@
   border: 1px solid $lightBlue;
   box-shadow: $boxShadow1;
   border-radius: $mainBorderRadius;
+
+  .filter {
+    width: fit-content;
+    @include flexCenter;
+    padding: 4px 8px;
+    background: #f3f9ff;
+    border-radius: 4px;
+
+    .filterName {
+      margin-right: 8px;
+    }
+
+    .filterImage {
+      @include flexCenter;
+      margin-right: 2px;
+    }
+
+    .filterNumber {
+      font-size: 10px;
+      line-height: 12px;
+      color: $lightBlue;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .listItem {
+    padding: 4px 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
 }
