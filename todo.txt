@@ -30,6 +30,7 @@ mobilefirst 320+
 
 
 StickyTourInfo
+	
 
 Не забыть box-shadow
 
