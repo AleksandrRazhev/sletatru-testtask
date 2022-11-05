@@ -26,7 +26,8 @@ mobilefirst 320+
 	Open Sans SemiBold 600 (60)
 	Open Sans Bold 700 (22)
 	Open Sans ExtraBold 800(3)
-	
+
+в main screen есть скрытые слои, не понятно, что с ними делать
 
 картинки с помощью компонента Image, ссылки с помощью компонента Link
 Обязательно тег H1
