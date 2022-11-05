@@ -25,13 +25,15 @@ export const StickyTourInfo: React.FC = (): JSX.Element => {
           <Clock />
           <span>3 дня / 4 ночи</span>
         </li>
-        <li className={style.listItem}>
+        <li className={style.calendar}>
           <Calendar />
-          <span>31 сентября</span>
-          <span>Пн</span>
-          <span>—</span>
-          <span>5 ноября</span>
-          <span>Вс</span>
+          <div className={style.calendarRow}>
+            <span>31 сентября</span>
+            <span className={style.dateFirst}>Пн</span>
+            <span className={style.dash}>—</span>
+            <span>5 ноября</span>
+            <span className={style.dateLast}>Вс</span>
+          </div>
         </li>
         <li className={style.listItem}>
           <Group />

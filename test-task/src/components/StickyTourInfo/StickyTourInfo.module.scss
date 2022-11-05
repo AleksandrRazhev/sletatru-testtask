@@ -44,10 +44,37 @@
     gap: 8px;
   }
 
-  .listItem {
+  .listItem,
+  .calendar {
     padding: 4px 0;
     display: flex;
     gap: 8px;
     align-items: center;
+  }
+
+  .calendar {
+    .calendarRow {
+      display: flex;
+      gap: 4px;
+
+      .dateFirst,
+      .dateLast {
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+      }
+
+      .dateFirst {
+        color: $textDarkGrey;
+      }
+
+      .dateLast {
+        color: $accentRed;
+      }
+
+      .dash {
+        font-size: 14px;
+      }
+    }
   }
 }
