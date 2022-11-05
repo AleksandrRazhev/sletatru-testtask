@@ -1,14 +1,30 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
+@mixin titleMixin {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .booking {
   @include containerPaddings;
+  font-size: 12px;
+  line-height: 16px;
+  color: $textBlack;
+
   .container {
-    height: 500px;
+    padding: 40px 16px;
     border-radius: $mainBorderRadius;
     background-color: #fff;
 
+    .bookingTitle {
+      @include titleMixin;
+      margin-bottom: 40px;
+    }
+
     .title {
+      @include titleMixin;
     }
   }
 }

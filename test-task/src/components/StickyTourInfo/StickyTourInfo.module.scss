@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.stickyTourInfo {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid $lightBlue;
+  box-shadow: $boxShadow1;
+  border-radius: $mainBorderRadius;
+}
