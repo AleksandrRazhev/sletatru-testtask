@@ -1,0 +1,40 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.payment {
+  display: grid;
+  gap: 4px;
+  .title {
+    min-height: 28px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .money {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    line-height: 40px;
+    color: $lightBlue;
+    .text {
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    .img {
+      width: 12px;
+      height: 24px;
+      display: flex;
+      transform: translateY(5px);
+      svg {
+        width: 12px;
+        height: 24px;
+        path {
+          fill: $lightBlue;
+        }
+      }
+    }
+  }
+}

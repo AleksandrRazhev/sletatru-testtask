@@ -13,6 +13,7 @@
     padding: 40px 16px;
     border-radius: $mainBorderRadius;
     background-color: #fff;
+    box-shadow: $boxShadow1;
 
     .tourInfo {
       display: grid;
@@ -46,6 +47,7 @@
 
     .form {
       display: grid;
+      gap: 40px;
     }
   }
 }

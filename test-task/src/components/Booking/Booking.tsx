@@ -1,9 +1,10 @@
 import { StickyTourInfo } from "../StickyTourInfo/StickyTourInfo";
 import { Input } from "../UI/Input/Input";
 import { BuyerData } from "./BuyerData/BuyerData";
+import { TouristInfo } from "./TouristInfo/TouristInfo";
 
 import style from "./Booking.module.scss";
-import { TouristInfo } from "./TouristInfo/TouristInfo";
+import { Payment } from "./Payment/Payment";
 
 export const Booking: React.FC = (): JSX.Element => {
   return (
@@ -27,7 +28,7 @@ export const Booking: React.FC = (): JSX.Element => {
           <BuyerData />
           <TouristInfo />
         </form>
-        <div className={style.payment}></div>
+        <Payment />
       </div>
     </section>
   );

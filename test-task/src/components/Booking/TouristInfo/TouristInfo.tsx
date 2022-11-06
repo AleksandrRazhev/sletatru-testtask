@@ -11,13 +11,15 @@ export const TouristInfo: React.FC = (): JSX.Element => {
     { name: "birthday", placeholder: "Дата рождения" },
     { name: "passport", placeholder: "Серия и номер паспорта" },
     { name: "whenissued", placeholder: "Когда выдан" },
-    { name: "whereissued", placeholder: "Где выдан" },
+    { name: "whomeissued", placeholder: "Кем выдан" },
   ];
 
   return (
     <div className={style.touristInfo}>
-      <h3 className={style.title}>Информация о туристах</h3>
-      <p>Пусть это заполнят твои двуногие</p>
+      <div className={style.titleBlock}>
+        <h3 className={style.title}>Информация о туристах</h3>
+        <p>Пусть это заполнят твои двуногие</p>
+      </div>
       <TouristData
         title="Данные о первом двуногом"
         data={data}
