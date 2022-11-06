@@ -50,12 +50,9 @@
       gap: 4px;
     }
 
-    .ruble {
-      @include flexCenter;
-      svg {
-        width: 12px;
-        height: 24px;
-      }
+    svg {
+      width: 12px;
+      height: 24px;
     }
   }
 }

@@ -1,12 +1,6 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-@mixin titleMixin {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .booking {
   @include containerPaddings;
   font-size: 12px;
@@ -14,17 +8,52 @@
   color: $textBlack;
 
   .container {
+    display: grid;
+    gap: 40px;
     padding: 40px 16px;
     border-radius: $mainBorderRadius;
     background-color: #fff;
 
-    .bookingTitle {
-      @include titleMixin;
-      margin-bottom: 24px;
+    .tourInfo {
+      display: grid;
+      gap: 24px;
+
+      .title,
+      .bookingTitle {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .help {
+        display: grid;
+        gap: 9px;
+
+        .helpTitle {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        .helpPhone {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          color: $lightBlue;
+        }
+      }
     }
 
-    .title {
-      @include titleMixin;
+    .inputTuorist {
+      font-size: 12px;
+      line-height: 16px;
+      &::placeholder {
+        color: $textDarkGrey;
+      }
+    }
+
+    .form {
+      display: grid;
     }
   }
 }

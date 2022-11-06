@@ -18,9 +18,7 @@ export const StickyFooter: React.FC = (): JSX.Element => {
         <span className={style.titlePaid}>Итого к оплате</span>
         <div className={style.pricePaid}>
           <span>200 000</span>
-          <span className={style.ruble}>
-            <Ruble />
-          </span>
+          <Ruble />
         </div>
       </div>
     </div>
