@@ -1,13 +1,16 @@
 @import "../../../styles/variables";
 
 .input {
-  min-height: 36px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  border: 1px solid $textLightGrey;
-  background: #fff;
-  ::placeholder {
-    color: $textLightGrey;
+  input {
+    width: 100%;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $textLightGrey;
+    background: #fff;
+    ::placeholder {
+      color: $textLightGrey;
+    }
   }
 }

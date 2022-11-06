@@ -5,6 +5,7 @@ import { TouristInfo } from "./TouristInfo/TouristInfo";
 
 import style from "./Booking.module.scss";
 import { Payment } from "./Payment/Payment";
+import { BookingButtons } from "./BookingButtons/BookingButtons";
 
 export const Booking: React.FC = (): JSX.Element => {
   return (
@@ -27,8 +28,11 @@ export const Booking: React.FC = (): JSX.Element => {
         >
           <BuyerData />
           <TouristInfo />
+          <div className={style.paymentButtons}>
+            <Payment />
+            <BookingButtons />
+          </div>
         </form>
-        <Payment />
       </div>
     </section>
   );
