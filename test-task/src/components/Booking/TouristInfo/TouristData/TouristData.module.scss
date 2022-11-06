@@ -1,0 +1,30 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.touristData {
+  display: grid;
+  padding: 16px;
+  gap: 12px;
+  background: #fff;
+  box-shadow: $boxShadow1;
+  border-radius: $mainBorderRadius;
+
+  .titleBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .button {
+      @include flexCenter;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .inputTuorist {
+    font-size: 12px;
+    line-height: 16px;
+    &::placeholder {
+      color: $textDarkGrey;
+    }
+  }
+}

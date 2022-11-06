@@ -44,14 +44,6 @@
       }
     }
 
-    .inputTuorist {
-      font-size: 12px;
-      line-height: 16px;
-      &::placeholder {
-        color: $textDarkGrey;
-      }
-    }
-
     .form {
       display: grid;
     }

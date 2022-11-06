@@ -1,7 +1,9 @@
 import { StickyTourInfo } from "../StickyTourInfo/StickyTourInfo";
 import { Input } from "../UI/Input/Input";
-import style from "./Booking.module.scss";
 import { BuyerData } from "./BuyerData/BuyerData";
+
+import style from "./Booking.module.scss";
+import { TouristInfo } from "./TouristInfo/TouristInfo";
 
 export const Booking: React.FC = (): JSX.Element => {
   return (
@@ -23,19 +25,7 @@ export const Booking: React.FC = (): JSX.Element => {
           method="POST"
         >
           <BuyerData />
-          <div className={style.touristInfo}>
-            <h3 className={style.title}>Информация о туристах</h3>
-            <p>Пусть это заполнят твои двуногие</p>
-            <div>
-              <p>Данные о первом двуногом</p>
-              <label className={style.inputTuorist}>
-                <Input type="text" name="surnameFirst" placeholder="Фамилия" />
-              </label>
-            </div>
-            <div>
-              <p>Данные о втором двуногом</p>
-            </div>
-          </div>
+          <TouristInfo />
         </form>
         <div className={style.payment}></div>
       </div>
