@@ -18,8 +18,12 @@ export const TouristInfo: React.FC = (): JSX.Element => {
     <div className={style.touristInfo}>
       <h3 className={style.title}>Информация о туристах</h3>
       <p>Пусть это заполнят твои двуногие</p>
-      <TouristData title="Данные о первом двуногом" data={data} />
-      <TouristData title="Данные о втором двуногом" data={data} />
+      <TouristData
+        title="Данные о первом двуногом"
+        data={data}
+        closed={false}
+      />
+      <TouristData title="Данные о втором двуногом" data={data} closed={true} />
     </div>
   );
 };

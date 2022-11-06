@@ -1,30 +1,53 @@
 @import "../../../../styles/variables";
 @import "../../../../styles/mixins";
 
-.touristData {
+.touristData,
+.touristDataClosed {
   display: grid;
   padding: 16px;
   gap: 12px;
   background: #fff;
   box-shadow: $boxShadow1;
   border-radius: $mainBorderRadius;
+}
 
-  .titleBlock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .button {
-      @include flexCenter;
-      width: 20px;
-      height: 20px;
-    }
+.touristDataClosed {
+  .button {
+    transform: rotate(180deg);
   }
-
   .inputTuorist {
-    font-size: 12px;
-    line-height: 16px;
-    &::placeholder {
-      color: $textDarkGrey;
-    }
+    transform: scaleY(0);
+  }
+  .inputsBlock {
+    max-height: 0;
+  }
+}
+
+.titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button {
+    @include flexCenter;
+    width: 20px;
+    height: 20px;
+    transition: transform 1s ease-in-out;
+  }
+}
+
+.inputsBlock {
+  max-height: 1000px;
+  display: grid;
+  gap: 12px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.inputTuorist {
+  font-size: 12px;
+  line-height: 16px;
+  transition: transform 1s ease-in-out;
+  &::placeholder {
+    color: $textDarkGrey;
   }
 }
