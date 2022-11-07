@@ -7,7 +7,14 @@ export const BookingButtons: React.FC = (): JSX.Element => {
   return (
     <div className={style.bookingButtons}>
       <Button>Забронировать</Button>
-      <Checkbox />
+      <div className={style.textBlock}>
+        <Checkbox />
+        <p className={style.text}>
+          Я согласен на обработку своих персональных данных согласно
+          <a href=""> политике конфиденциальности </a>и с условиями
+          <a href=""> оферты</a>
+        </p>
+      </div>
     </div>
   );
 };
