@@ -2,6 +2,7 @@
 @import "../../styles/mixins";
 
 .stickyTourInfo {
+  margin-bottom: 24px;
   padding: 16px 16px 11px;
   display: grid;
   gap: 16px;
@@ -42,6 +43,12 @@
   .list {
     display: grid;
     gap: 8px;
+    @media screen and (min-width: 768px) {
+      grid-auto-flow: column;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 107px;
+      grid-row-gap: 10px;
+    }
   }
 
   .listItem,
@@ -50,6 +57,11 @@
     display: flex;
     gap: 7.2px;
     align-items: center;
+    @media screen and (min-width: 768px) {
+      padding: 1px 0;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   .calendar {
@@ -62,6 +74,12 @@
         font-weight: 600;
         letter-spacing: 0.75px;
         text-transform: uppercase;
+        @media screen and (min-width: 768px) {
+          @include flexCenter;
+          transform: translateY(2px);
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
 
       .dateFirst {
@@ -74,6 +92,9 @@
 
       .dash {
         font-size: 14px;
+        @media screen and (min-width: 768px) {
+          transform: translateY(-2px);
+        }
       }
     }
   }
@@ -83,5 +104,8 @@
     justify-content: flex-start;
     font-weight: 600;
     color: $lightBlue;
+    @media screen and (min-width: 768px) {
+      padding-top: 3px;
+    }
   }
 }

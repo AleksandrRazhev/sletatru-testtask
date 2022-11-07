@@ -14,29 +14,44 @@
     border-radius: $mainBorderRadius;
     background-color: #fff;
     box-shadow: $boxShadow1;
+    @media screen and (min-width: 768px) {
+      padding: 40px 32px;
+    }
 
     .tourInfo {
       display: grid;
       gap: 24px;
-
+      @media screen and (min-width: 768px) {
+        gap: 40px;
+      }
       .title,
       .bookingTitle {
         font-weight: 600;
         font-size: 20px;
         line-height: 24px;
+        @media screen and (min-width: 768px) {
+          font-size: 32px;
+          line-height: 40px;
+        }
       }
 
       .help {
         display: grid;
         gap: 9px;
+        @media screen and (min-width: 768px) {
+          grid-template-columns: auto 1fr;
+        }
 
         .helpTitle {
+          display: flex;
+          align-items: center;
           font-weight: 600;
           font-size: 16px;
           line-height: 20px;
         }
 
         .helpPhone {
+          max-width: fit-content;
           font-weight: 700;
           font-size: 20px;
           line-height: 24px;
