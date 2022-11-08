@@ -15,7 +15,7 @@
     background-color: #fff;
     box-shadow: $boxShadow1;
     @media screen and (min-width: 768px) {
-      padding: 40px 32px;
+      padding: 40px 32px 26px;
     }
 
     .tourInfo {
@@ -68,6 +68,9 @@
     .paymentButtons {
       display: grid;
       gap: 15px;
+      @media screen and (min-width: 768px) {
+        grid-template-columns: auto 362px;
+      }
     }
   }
 }

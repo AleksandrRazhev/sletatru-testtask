@@ -4,6 +4,9 @@
 .payment {
   display: grid;
   gap: 4px;
+  @media screen and (min-width: 768px) {
+    grid-template-rows: 28px 40px;
+  }
   .title {
     min-height: 28px;
     display: flex;

@@ -29,6 +29,10 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
   .button {
     @include flexCenter;
     width: 20px;
@@ -43,12 +47,21 @@
   gap: 12px;
   overflow: hidden;
   transition: all 1s ease-in-out;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .inputTuorist {
   font-size: 12px;
   line-height: 16px;
   transition: transform 1s ease-in-out;
+  @media screen and (min-width: 768px) {
+    &:last-child {
+      grid-column: 1 / span 3;
+    }
+  }
   input {
     padding: 0 13px;
     &::placeholder {

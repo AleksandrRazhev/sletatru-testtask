@@ -27,17 +27,17 @@ export const TouristData = (props: TouristDataProps): JSX.Element => {
           <DropDownButton />
         </button>
       </div>
-      <div className={style.inputsBlock}>
+      <ul className={style.inputsBlock}>
         {data.map((item) => (
-          <label key={item.name} className={style.inputTuorist}>
+          <li key={item.name} className={style.inputTuorist}>
             <Input
               type="text"
               name={item.name}
               placeholder={item.placeholder}
             />
-          </label>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
