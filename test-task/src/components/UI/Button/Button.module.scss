@@ -13,4 +13,7 @@
   align-items: center;
   background: $yellow;
   border-radius: $mainBorderRadius;
+  @media screen and (min-width: 1200px) {
+    padding-top: 2px;
+  }
 }

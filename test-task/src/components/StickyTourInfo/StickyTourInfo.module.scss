@@ -10,6 +10,9 @@
   border: 1px solid $lightBlue;
   box-shadow: $boxShadow1;
   border-radius: $mainBorderRadius;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 39px;
+  }
 
   .filter {
     width: fit-content;
@@ -111,6 +114,10 @@
     color: $lightBlue;
     @media screen and (min-width: 768px) {
       padding-top: 3px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 2px;
+      margin-bottom: 0;
     }
   }
 }
