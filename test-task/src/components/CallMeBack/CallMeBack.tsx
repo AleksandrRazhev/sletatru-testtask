@@ -15,6 +15,7 @@ export const CallMeBack: React.FC = (): JSX.Element => {
             вопросах
           </p>
           <form
+            className={style.form}
             action="https://jsonplaceholder.typicode.com/posts"
             method="POST"
           >
@@ -26,7 +27,12 @@ export const CallMeBack: React.FC = (): JSX.Element => {
               label="Ваш номер телефона"
             />
             <Button>Перезвоните мне</Button>
-            <CheckboxBlock />
+            <CheckboxBlock>
+              <p>
+                Я согласен на обработку своих персональных данных согласно
+                <a href="#"> политике конфиденциальности </a>
+              </p>
+            </CheckboxBlock>
           </form>
         </div>
         <div className={style.picture}></div>
