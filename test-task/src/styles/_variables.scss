@@ -18,3 +18,15 @@ $textLightGrey: #e6e6e6;
 
 $boxShadow1: 0px 2px 8px rgba(15, 85, 126, 0.04),
   4px 4px 16px rgba(18, 102, 152, 0.08);
+
+$background1: radial-gradient(
+    85.62% 123.5% at 16.99% 100%,
+    rgba(0, 195, 255, 0.2) 0%,
+    rgba(243, 249, 255, 0) 100%
+  ),
+  radial-gradient(
+    90.83% 141.65% at 88.14% 9.17%,
+    rgba(91, 194, 0, 0.16) 0%,
+    rgba(243, 249, 255, 0) 100%
+  ),
+  #f3f9ff;

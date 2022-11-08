@@ -1,7 +1,9 @@
-import style from "./App.module.scss";
 import { Header } from "../Header/Header";
 import { MainScreen } from "../MainScreen/MainScreen";
 import { Booking } from "../Booking/Booking";
+import { CallMeBack } from "../CallMeBack/CallMeBack";
+
+import style from "./App.module.scss";
 
 export const App: React.FC = (): JSX.Element => {
   return (
@@ -12,7 +14,7 @@ export const App: React.FC = (): JSX.Element => {
       </div>
       <main className={style.main}>
         <Booking />
-        <div style={{ backgroundColor: "red" }}>CallMe</div>
+        <CallMeBack />
       </main>
       <footer style={{ backgroundColor: "red" }}>footer</footer>
     </div>
