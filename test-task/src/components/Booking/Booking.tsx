@@ -11,9 +11,9 @@ export const Booking: React.FC = (): JSX.Element => {
   return (
     <section className={style.booking}>
       <div className={style.container}>
+        <h2 className={style.bookingTitle}>Бронирование тура</h2>
         <div className={style.tourInfo}>
-          <h2 className={style.bookingTitle}>Бронирование тура</h2>
-          <div>
+          <div className={style.desktopRight}>
             <StickyTourInfo />
             <div className={style.help}>
               <h3 className={style.helpTitle}>Нужна помощь?</h3>

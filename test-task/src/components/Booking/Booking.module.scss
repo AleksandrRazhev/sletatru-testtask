@@ -17,6 +17,23 @@
     @media screen and (min-width: 768px) {
       padding: 40px 32px 26px;
     }
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: 1fr 400px;
+    }
+
+    .title,
+    .bookingTitle {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      @media screen and (min-width: 768px) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      @media screen and (min-width: 1200px) {
+        grid-column: span 2;
+      }
+    }
 
     .tourInfo {
       display: grid;
@@ -24,15 +41,8 @@
       @media screen and (min-width: 768px) {
         gap: 40px;
       }
-      .title,
-      .bookingTitle {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        @media screen and (min-width: 768px) {
-          font-size: 32px;
-          line-height: 40px;
-        }
+      @media screen and (min-width: 1200px) {
+        order: 3;
       }
 
       .help {
