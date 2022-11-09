@@ -37,6 +37,8 @@ mobilefirst 320+
 	
 Не забыть box-shadow
 
+mobile navigation (бургер)
+
 в main screen есть скрытые слои, не понятно, что с ними делать
 
 Обязательно тег H1

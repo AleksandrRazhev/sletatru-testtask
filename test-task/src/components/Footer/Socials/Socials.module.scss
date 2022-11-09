@@ -1,0 +1,16 @@
+@import "../../../styles/mixins";
+
+.socials {
+  max-width: 99px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+}
+
+.socialItem {
+  @include flexCenter;
+}
+
+.socialLink {
+  @include flexCenter;
+}

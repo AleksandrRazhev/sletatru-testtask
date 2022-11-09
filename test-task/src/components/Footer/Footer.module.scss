@@ -6,12 +6,18 @@
 }
 
 .container {
-  padding-top: 80px;
-  padding-bottom: 44px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 80px;
+    padding-bottom: 44px;
+  }
 }
 
 .mainGrid {
+  display: grid;
+  gap: 24px;
   @media screen and (min-width: 1200px) {
+    gap: 104px;
+    grid-template-columns: 1fr 665px 1fr;
     max-width: 1075px;
   }
 }
