@@ -1,10 +1,17 @@
 @import "../../../styles/mixins";
 
 .socials {
-  max-width: 99px;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  justify-content: space-between;
+  justify-content: start;
+  gap: 24px;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto;
+    align-self: start;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(3, auto);
+  }
 }
 
 .socialItem {

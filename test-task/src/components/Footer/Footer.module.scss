@@ -3,11 +3,17 @@
 
 .footer {
   @include containerPaddings;
+  padding-bottom: 20px;
 }
 
 .container {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     padding-top: 80px;
+    padding-bottom: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 75px;
     padding-bottom: 44px;
   }
 }
@@ -15,9 +21,15 @@
 .mainGrid {
   display: grid;
   gap: 24px;
+  @media screen and (min-width: 768px) {
+    max-width: 666px;
+    grid-template-columns: 160px auto auto;
+  }
   @media screen and (min-width: 1200px) {
-    gap: 104px;
-    grid-template-columns: 1fr 665px 1fr;
+    max-width: none;
+    gap: 0;
+    justify-content: space-between;
+    grid-template-columns: auto 665px auto;
     max-width: 1075px;
   }
 }

@@ -1,18 +1,28 @@
 @import "../../../styles/variables";
 
 .hotLine {
-  min-height: 48px;
+  max-width: 301px;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   color: $textBlack;
   margin-bottom: 11px;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: 48px;
+    gap: 31px;
+    justify-content: start;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 1px;
+    justify-content: space-between;
+    gap: 44px;
+  }
   * {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    gap: 15px;
   }
 }
