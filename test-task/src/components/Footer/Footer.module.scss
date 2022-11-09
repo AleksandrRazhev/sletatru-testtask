@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.footer {
+  @include containerPaddings;
+}
+
+.container {
+  padding-top: 80px;
+  padding-bottom: 44px;
+}
+
+.mainGrid {
+  @media screen and (min-width: 1200px) {
+    max-width: 1075px;
+  }
+}
