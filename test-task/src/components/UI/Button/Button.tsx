@@ -5,5 +5,9 @@ interface ButtonProps {
 }
 
 export const Button = ({ children }: ButtonProps): JSX.Element => {
-  return <button className={style.button}>{children}</button>;
+  return (
+    <button className={style.button} data-selector="button">
+      {children}
+    </button>
+  );
 };

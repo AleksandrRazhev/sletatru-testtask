@@ -9,7 +9,7 @@ interface CheckboxBlockProps {
 
 export const CheckboxBlock = (props: CheckboxBlockProps): JSX.Element => {
   return (
-    <div className={style.textBlock}>
+    <div data-selector="checkbox-block" className={style.textBlock}>
       <Checkbox />
       {props.children}
     </div>

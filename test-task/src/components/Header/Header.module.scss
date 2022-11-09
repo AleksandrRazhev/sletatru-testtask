@@ -21,3 +21,17 @@
     }
   }
 }
+
+.logoColor {
+  display: none;
+  @media screen and (min-width: 768px) {
+    @include flexCenter;
+  }
+}
+
+.logoWhite {
+  @include flexCenter;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

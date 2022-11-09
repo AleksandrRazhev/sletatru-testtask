@@ -19,14 +19,16 @@ export const CallMeBack: React.FC = (): JSX.Element => {
             action="https://jsonplaceholder.typicode.com/posts"
             method="POST"
           >
-            <Input
-              name="phone"
-              placeholder=""
-              type="tel"
-              defaultValue="+7"
-              label="Ваш номер телефона"
-            />
-            <Button>Перезвоните мне</Button>
+            <div className={style.inputBlock}>
+              <Input
+                name="phone"
+                placeholder=""
+                type="tel"
+                defaultValue="+7"
+                label="Ваш номер телефона"
+              />
+              <Button>Перезвоните мне</Button>
+            </div>
             <CheckboxBlock>
               <p>
                 Я согласен на обработку своих персональных данных согласно

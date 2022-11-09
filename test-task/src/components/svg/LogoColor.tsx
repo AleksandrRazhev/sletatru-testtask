@@ -1,9 +1,6 @@
-import style from "./Logo.module.scss";
-
-export const Logo: React.FC = (): JSX.Element => {
+export const LogoColor: React.FC = (): JSX.Element => {
   return (
     <svg
-      className={style.logo}
       width="158"
       height="40"
       viewBox="0 0 158 40"

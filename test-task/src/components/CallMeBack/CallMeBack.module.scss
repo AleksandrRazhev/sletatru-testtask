@@ -3,43 +3,8 @@
 
 .callMeBack {
   @include containerPaddings;
-}
 
-.container {
-  padding: 111px 11px 32px;
-  position: relative;
-  z-index: 0;
-  background: $background1;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: $mainBorderRadius;
-}
-
-.block {
-  max-width: 604px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.title {
-  margin-bottom: 5px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.subtitle {
-  margin-bottom: 23px;
-  @include flexCenter;
-  text-align: center;
-}
-
-.form {
-  display: grid;
-  gap: 8px;
-  label {
+  [data-selector="input"] {
     position: relative;
     z-index: 0;
     span {
@@ -50,6 +15,10 @@
       font-size: 12px;
       line-height: 16px;
       color: $textDarkGrey;
+      @media screen and (min-width: 768px) {
+        top: 7px;
+        left: 19px;
+      }
     }
     input {
       padding: 24px 12px 8px;
@@ -58,20 +27,103 @@
       line-height: 20px;
       border-radius: $mainBorderRadius;
       border: none;
+      @media screen and (min-width: 768px) {
+        padding: 26px 19px 10px;
+      }
     }
   }
 
-  button {
+  [data-selector="button"] {
     padding-top: 0;
     margin-bottom: 8px;
   }
 
-  div {
-    grid-template-columns: 16px 1fr;
+  [data-selector="checkbox-block"] {
+    grid-template-columns: auto 1fr;
     gap: 11px;
+    label {
+      @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
     p {
       font-size: 12px;
       line-height: 16px;
+    }
+  }
+}
+
+.container {
+  padding: 111px 11px 32px;
+  position: relative;
+  z-index: 0;
+  background: $background1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: $mainBorderRadius;
+  @media screen and (min-width: 768px) {
+    padding: 32px;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  @media screen and (min-width: 768px) {
+    max-width: 504px;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 604px;
+  }
+}
+
+.title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 23px;
+  @include flexCenter;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+    max-width: 85%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.inputBlock {
+  display: grid;
+  gap: 8px;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto 183px;
+    gap: 0;
+    border-radius: $mainBorderRadius;
+    background-color: #fff;
+    :last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -97,8 +149,8 @@
     width: 280px;
     height: 240px;
     top: auto;
-    right: 0;
-    bottom: 0;
+    right: -6px;
+    bottom: -5px;
   }
 
   @media screen and (min-width: 1200px) {

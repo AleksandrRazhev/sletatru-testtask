@@ -1,9 +1,6 @@
-import style from "./LogoMobile.module.scss";
-
-export const LogoMobile: React.FC = (): JSX.Element => {
+export const LogoWhite: React.FC = (): JSX.Element => {
   return (
     <svg
-      className={style.logoMobile}
       width="82"
       height="32"
       viewBox="0 0 82 32"
