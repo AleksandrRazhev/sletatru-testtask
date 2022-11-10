@@ -4,7 +4,6 @@ import { Tel } from "./Tel/Tel";
 import { Enter } from "./Enter/Enter";
 import { LogoColor } from "../svg/LogoColor";
 import { LogoWhite } from "../svg/LogoWhite";
-import { Burger } from "../svg/Burger";
 
 import style from "./Header.module.scss";
 
@@ -27,7 +26,13 @@ export const Header: React.FC = (): JSX.Element => {
         className={style.buttonBurger}
         onClick={() => setState((state) => !state)}
       >
-        <Burger />
+        <div className={style.crossBurger}>
+          <div>
+            <span className={style.burgerLine}></span>
+            <span className={style.burgerLine}></span>
+            <span className={style.burgerLine}></span>
+          </div>
+        </div>
       </button>
     </header>
   );
