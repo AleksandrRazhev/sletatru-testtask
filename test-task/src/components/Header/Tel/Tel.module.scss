@@ -1,25 +1,46 @@
 @import "../../../styles/variables";
+@import "../../../styles/mixins";
 
-.tel {
+.tel,
+.telActive {
   display: flex;
   align-items: center;
   color: $blue;
   @media screen and (min-width: 768px) {
     margin-right: 60px;
   }
-  .list {
-    display: flex;
-    align-items: center;
-    margin-right: 8px;
-    li:not(:first-child) {
-      display: none;
-    }
-  }
-  .button {
-    display: flex;
-    align-items: center;
+  .listItem:not(:first-child) {
+    display: none;
   }
 }
-.list.active li {
-  display: block;
+
+.telActive {
+  .listItem:not(:first-child) {
+    display: block;
+  }
+}
+
+.dropdownImg {
+  width: 15px;
+  height: 16px;
+  @include flexCenter;
+  transform: rotate(180deg);
+  svg {
+    width: 7px;
+    height: 4px;
+    path {
+      fill: $blue;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
 }
