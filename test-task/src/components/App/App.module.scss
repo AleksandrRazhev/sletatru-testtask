@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 .app {
+  position: relative;
   display: grid;
   gap: $mainGap320;
   max-width: 100%;
