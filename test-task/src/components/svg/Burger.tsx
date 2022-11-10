@@ -1,9 +1,6 @@
-import style from "./Burger.module.scss";
-
 export const Burger: React.FC = (): JSX.Element => {
   return (
     <svg
-      className={style.burger}
       width="20"
       height="20"
       viewBox="0 0 20 20"

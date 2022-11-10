@@ -9,12 +9,12 @@ export const Tel: React.FC = (): JSX.Element => {
   const listClass = (): string => (state ? style.telActive : style.tel);
 
   return (
-    <div className={listClass()}>
+    <div className={listClass()} data-selector="header-tel">
       <ul className={style.list}>
         <li className={style.listItem}>
           <a href="tel:+78123092666">8 (812) 309-26-66</a>
         </li>
-        <div className={style.dropDown}>
+        <div className={style.dropDown} data-selector="header-tel-dropdown">
           <li className={style.listItem}>
             <a href="tel:+78123092666">8 (812) 309-26-66</a>
           </li>

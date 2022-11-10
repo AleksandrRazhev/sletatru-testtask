@@ -1,6 +1,7 @@
 @import "../../styles/mixins";
 
-.header {
+.header,
+.headerBurgerOn {
   @include containerPaddings;
   font-size: 14px;
   line-height: 19px;
@@ -14,11 +15,59 @@
   align-items: center;
   font-size: 14px;
   line-height: 19px;
-  .dropDown {
-    display: none;
-    @media screen and (min-width: 768px) {
-      display: flex;
+}
+
+.headerBurgerOn {
+  @media screen and (max-width: 767px) {
+    position: relative;
+    z-index: 10;
+
+    .dropDown {
+      transform: translateY(0);
     }
+
+    .buttonBurger {
+      @include flexCenter;
+      position: relative;
+      z-index: 20;
+      path {
+        transition: stroke 1s ease-in-out;
+        stroke: #000;
+      }
+    }
+  }
+}
+
+.dropDown {
+  @media screen and (max-width: 767px) {
+    padding: 16px 24px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    background-color: $bodyColor;
+    transition: transform 1s ease-in-out;
+    li {
+      margin-bottom: 24px;
+    }
+    [data-selector="header-tel"] {
+      button {
+        display: none;
+      }
+
+      [data-selector="header-tel-dropdown"] {
+        min-height: 79px;
+        position: static;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -31,6 +80,20 @@
 
 .logoWhite {
   @include flexCenter;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.buttonBurger {
+  @media screen and (max-width: 767px) {
+    @include flexCenter;
+    position: relative;
+    z-index: 20;
+    path {
+      transition: stroke 1s ease-in-out;
+    }
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }
