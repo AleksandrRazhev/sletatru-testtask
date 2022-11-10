@@ -14,15 +14,17 @@ export const Tel: React.FC = (): JSX.Element => {
         <li className={style.listItem}>
           <a href="tel:+78123092666">8 (812) 309-26-66</a>
         </li>
-        <li className={style.listItem}>
-          <a href="tel:+78123092666">8 (812) 309-26-66</a>
-        </li>
+        <div className={style.dropDown}>
+          <li className={style.listItem}>
+            <a href="tel:+78123092666">8 (812) 309-26-66</a>
+          </li>
+        </div>
       </ul>
       <button
         className={style.button}
         onClick={() => setState((state) => !state)}
       >
-        <div className={style.dropdownImg}>
+        <div className={style.buttonImg}>
           <DropDownButton />
         </div>
       </button>
