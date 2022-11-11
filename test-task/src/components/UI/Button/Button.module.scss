@@ -16,4 +16,7 @@
   @media screen and (min-width: 1200px) {
     padding-top: 2px;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }

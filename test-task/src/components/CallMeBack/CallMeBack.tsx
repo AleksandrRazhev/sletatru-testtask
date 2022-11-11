@@ -31,7 +31,9 @@ export const CallMeBack: React.FC = (): JSX.Element => {
                 defaultValue="+7"
                 label="Ваш номер телефона"
               />
-              <Button>Перезвоните мне</Button>
+              <CallMeBackGetState.Provider value={allow}>
+                <Button>Перезвоните мне</Button>
+              </CallMeBackGetState.Provider>
             </div>
             <CallMeBackSetState.Provider
               value={(bool: boolean) => setAllow(bool)}
@@ -51,5 +53,5 @@ export const CallMeBack: React.FC = (): JSX.Element => {
   );
 };
 
-export const CallMeBackSetState: any = createContext<Function | null>(null);
-export const CallMeBackGetState: any = createContext<boolean | null>(null);
+export const CallMeBackSetState = createContext<Function | null>(null);
+export const CallMeBackGetState = createContext<boolean>(true);

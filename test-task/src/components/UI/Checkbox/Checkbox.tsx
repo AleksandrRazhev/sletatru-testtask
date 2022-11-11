@@ -23,7 +23,7 @@ export const Checkbox: React.FC = (): JSX.Element => {
       <input
         type="checkbox"
         name="checkbox"
-        checked={state}
+        defaultChecked={state}
         onClick={(e) => onChecked(e)}
       />
       <div className={style.custom}>
