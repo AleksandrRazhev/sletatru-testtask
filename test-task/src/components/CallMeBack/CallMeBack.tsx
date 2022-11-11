@@ -1,3 +1,5 @@
+import { createContext, useState } from "react";
+
 import { CheckboxBlock } from "../CheckboxBlock/CheckboxBlock";
 import { Button } from "../UI/Button/Button";
 import { Input } from "../UI/Input/Input";
@@ -5,6 +7,8 @@ import { Input } from "../UI/Input/Input";
 import style from "./CallMeBack.module.scss";
 
 export const CallMeBack: React.FC = (): JSX.Element => {
+  const [allow, setAllow] = useState(false);
+
   return (
     <section className={style.callMeBack}>
       <div className={style.container}>
@@ -29,12 +33,16 @@ export const CallMeBack: React.FC = (): JSX.Element => {
               />
               <Button>Перезвоните мне</Button>
             </div>
-            <CheckboxBlock>
-              <p>
-                Я согласен на обработку своих персональных данных согласно
-                <a href="#"> политике конфиденциальности </a>
-              </p>
-            </CheckboxBlock>
+            <CallMeBackSetState.Provider
+              value={(bool: boolean) => setAllow(bool)}
+            >
+              <CheckboxBlock>
+                <p>
+                  Я согласен на обработку своих персональных данных согласно
+                  <a href="#"> политике конфиденциальности </a>
+                </p>
+              </CheckboxBlock>
+            </CallMeBackSetState.Provider>
           </form>
         </div>
         <div className={style.picture}></div>
@@ -42,3 +50,6 @@ export const CallMeBack: React.FC = (): JSX.Element => {
     </section>
   );
 };
+
+export const CallMeBackSetState: any = createContext<Function | null>(null);
+export const CallMeBackGetState: any = createContext<boolean | null>(null);
