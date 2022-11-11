@@ -1,15 +1,18 @@
 @import "../../../styles/variables";
 
 .input {
+  text-overflow: ellipsis;
   input {
     width: 100%;
     min-height: 36px;
     display: flex;
     align-items: center;
     border-radius: 4px;
+    text-overflow: ellipsis;
     border: 1px solid $textLightGrey;
     background: #fff;
     ::placeholder {
+      text-overflow: ellipsis;
       color: $textLightGrey;
     }
   }

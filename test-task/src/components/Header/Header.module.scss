@@ -156,5 +156,6 @@
 }
 
 .absolute {
+  @include containerPaddings;
   @include absoluteStretch;
 }
