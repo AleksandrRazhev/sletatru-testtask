@@ -1,8 +1,33 @@
 @import "../../styles/mixins";
 
-.tour {
+.tour,
+.tourActive {
   height: 100%;
   @include flexCenter;
+}
+
+.tour {
+  .block {
+    &:hover {
+      .subtitle {
+        display: block;
+      }
+    }
+  }
+}
+
+.tourActive {
+  .hidderSearch {
+    display: flex;
+  }
+
+  .title {
+    padding-top: 0;
+  }
+
+  .subtitle {
+    display: none;
+  }
 }
 
 .block {
@@ -17,11 +42,6 @@
   @media screen and (min-width: 768px) {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  &:hover {
-    .subtitle {
-      display: block;
-    }
   }
 }
 
