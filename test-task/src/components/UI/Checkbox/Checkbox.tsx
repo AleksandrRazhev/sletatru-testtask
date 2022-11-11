@@ -12,20 +12,16 @@ export const Checkbox: React.FC = (): JSX.Element => {
   const context: Function | null = useContext(CallMeBackSetState);
 
   const onChecked = (e: React.MouseEvent<HTMLInputElement>) => {
-    setState((state) => !state);
+    const checked = e.target.checked;
     if (context !== null) {
-      context(!state);
+      context(checked);
     }
+    setState(checked);
   };
 
   return (
     <label className={style.checkbox}>
-      <input
-        type="checkbox"
-        name="checkbox"
-        defaultChecked={state}
-        onClick={(e) => onChecked(e)}
-      />
+      <input type="checkbox" name="checkbox" onClick={(e) => onChecked(e)} />
       <div className={style.custom}>
         <CheckboxChecked />
       </div>

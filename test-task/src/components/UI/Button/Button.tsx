@@ -6,12 +6,10 @@ import style from "./Button.module.scss";
 
 interface ButtonProps {
   children: JSX.Element | string;
-  allow?: boolean;
 }
 
 export const Button = ({ children }: ButtonProps): JSX.Element => {
   const [allowClick, setAllowClick] = useState(true);
-
   const context: boolean = useContext(CallMeBackGetState);
 
   useEffect(() => {
