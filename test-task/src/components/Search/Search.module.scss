@@ -1,7 +1,9 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .search {
-  position: absolute;
+  @include containerPaddings;
+  padding-bottom: 4px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,31 +12,100 @@
   font-size: 16px;
   line-height: 20px;
   color: $textBlack;
-  background-color: red;
+  background-color: #a1a1a17c;
+}
+
+.dropdownBlock {
+  margin-bottom: 8px;
+  @include flexCenter;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.dropdown {
+  @include flexCenter;
+}
+
+.sityName {
+  color: $yellow;
+  margin-right: 4px;
+  border-bottom: 1px dashed $yellow;
+}
+
+.buttonDropdown {
+  width: 12px;
+  height: 12px;
+  @include flexCenter;
+  transform: rotate(180deg);
+  svg {
+    width: 8px;
+    height: 5px;
+  }
+  path {
+    fill: $yellow;
+  }
+}
+
+.label {
+  margin-right: 4px;
+  color: #fff;
 }
 
 .form {
+  padding-top: 8px;
   display: grid;
   gap: 8px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 56px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 56px);
 
   [data-selector="input"] {
+    position: relative;
+
+    span {
+      padding: 10px 12px;
+      @include absoluteStretch;
+      display: flex;
+      font-size: 12px;
+      line-height: 16px;
+      color: $textDarkGrey;
+    }
+
+    input {
+      padding: 16px 12px 0;
+      min-height: 100%;
+      font-size: 16px;
+      line-height: 20px;
+      border: none;
+      color: $textBlack;
+    }
+
     &:nth-child(1) {
-      grid-column: span 3;
+      grid-column: span 5;
     }
     &:nth-child(2) {
-      grid-column: span 3;
+      grid-column: span 5;
     }
     &:nth-child(3) {
-      grid-column: span 1;
+      grid-column: span 2;
     }
     &:nth-child(4) {
-      grid-column: span 2;
+      grid-column: span 3;
     }
   }
 
   [data-selector="button"] {
-    grid-column: span 3;
+    grid-column: span 5;
   }
+}
+
+.buttonChildren {
+  display: flex;
+  color: $textBlack;
+}
+
+.searchImg {
+  width: 20px;
+  height: 20px;
+  @include flexCenter;
 }

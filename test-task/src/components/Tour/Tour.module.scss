@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+
+.tour {
+  height: 100%;
+  @include flexCenter;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #fff;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &:hover {
+    .subtitle {
+      display: block;
+    }
+  }
+}
+
+.title {
+  padding-top: 33px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    padding-top: 76px;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.025em;
+  }
+}
+
+.button {
+  color: inherit;
+}
+
+.subtitle {
+  display: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hidderSearch {
+  display: none;
+}

@@ -14,29 +14,11 @@
   z-index: 0;
   @include containerPaddings;
   min-height: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  text-align: center;
   @media screen and (min-width: 768px) {
     min-height: 340px;
-    font-size: 40px;
-    line-height: 48px;
   }
   @media screen and (min-width: 1200px) {
     border-radius: $mainBorderRadius;
-  }
-
-  :hover {
-    .subtitle {
-      display: block;
-    }
-  }
-
-  :active {
-    .search {
-      display: flex;
-    }
   }
 
   &::before {
@@ -57,34 +39,4 @@
     @include absoluteStretch;
     @include pictureMargins;
   }
-}
-
-.block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 15px;
-  text-align: center;
-  color: #fff;
-  @media screen and (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 0;
-    letter-spacing: 0.025em;
-  }
-}
-
-.title {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.subtitle {
-  display: none;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
 }

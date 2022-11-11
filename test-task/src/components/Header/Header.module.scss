@@ -150,3 +150,11 @@
     }
   }
 }
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  @include absoluteStretch;
+}
