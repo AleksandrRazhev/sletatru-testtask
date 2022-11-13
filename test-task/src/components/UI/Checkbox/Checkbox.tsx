@@ -10,8 +10,8 @@ export const Checkbox = (props: CheckboxProps): JSX.Element => {
   const { setAllow } = props;
   const onChecked = (e: React.MouseEvent<HTMLInputElement>) => {
     if (setAllow) {
-      const checked = e.target.checked;
-      setAllow(checked);
+      const checked = e.target as HTMLInputElement;
+      setAllow(checked.checked);
     } else {
       return;
     }
