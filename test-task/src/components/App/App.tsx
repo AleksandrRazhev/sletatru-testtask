@@ -11,6 +11,7 @@ export const App: React.FC = (): JSX.Element => {
     <div className={style.app}>
       <Header />
       <main className={style.main}>
+        <h1 className={style.visuallyHidden}>Тестовое задание для sletat.ru</h1>
         <Booking />
         <CallMeBack />
       </main>

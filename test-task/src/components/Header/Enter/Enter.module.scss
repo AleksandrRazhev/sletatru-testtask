@@ -1,19 +1,21 @@
 @import "../../../styles/variables";
 
 .enter {
+  position: relative;
+  z-index: 10;
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
     color: $gold;
-    .button {
-      display: flex;
-      align-items: center;
-      color: inherit;
-      .buttonImg {
-        margin-right: 6px;
-      }
-      .buttonText {
-      }
-    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  svg {
+    margin-right: 6px;
   }
 }
