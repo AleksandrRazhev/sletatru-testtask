@@ -1,22 +1,20 @@
-import { useContext, useState } from "react";
-
-import { CallMeBackSetState } from "../../CallMeBack/CallMeBack";
-
 import { CheckboxChecked } from "../../svg/CheckboxChecked";
 
 import style from "./Checkbox.module.scss";
 
-export const Checkbox: React.FC = (): JSX.Element => {
-  const [state, setState] = useState(false);
+interface CheckboxProps {
+  setAllow?: Function;
+}
 
-  const context: Function | null = useContext(CallMeBackSetState);
-
+export const Checkbox = (props: CheckboxProps): JSX.Element => {
+  const { setAllow } = props;
   const onChecked = (e: React.MouseEvent<HTMLInputElement>) => {
-    const checked = e.target.checked;
-    if (context !== null) {
-      context(checked);
+    if (setAllow) {
+      const checked = e.target.checked;
+      setAllow(checked);
+    } else {
+      return;
     }
-    setState(checked);
   };
 
   return (

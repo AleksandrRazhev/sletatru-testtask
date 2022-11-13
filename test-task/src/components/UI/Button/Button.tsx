@@ -1,27 +1,13 @@
-import { useContext, useEffect, useState } from "react";
-
-import { CallMeBackGetState } from "../../CallMeBack/CallMeBack";
-
 import style from "./Button.module.scss";
 
 interface ButtonProps {
   children: JSX.Element | string;
+  disabled?: boolean;
 }
 
-export const Button = ({ children }: ButtonProps): JSX.Element => {
-  const [allowClick, setAllowClick] = useState(true);
-  const context: boolean = useContext(CallMeBackGetState);
-
-  useEffect(() => {
-    setAllowClick(context);
-  }, [context]);
-
+export const Button = ({ children, disabled }: ButtonProps): JSX.Element => {
   return (
-    <button
-      className={style.button}
-      data-selector="button"
-      disabled={!allowClick}
-    >
+    <button disabled={disabled} className={style.button} data-selector="button">
       {children}
     </button>
   );

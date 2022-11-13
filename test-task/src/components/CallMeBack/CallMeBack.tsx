@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 
 import { CheckboxBlock } from "../CheckboxBlock/CheckboxBlock";
 import { Button } from "../UI/Button/Button";
@@ -31,20 +31,14 @@ export const CallMeBack: React.FC = (): JSX.Element => {
                 defaultValue="+7"
                 label="Ваш номер телефона"
               />
-              <CallMeBackGetState.Provider value={allow}>
-                <Button>Перезвоните мне</Button>
-              </CallMeBackGetState.Provider>
+              <Button disabled={allow ? false : true}>Перезвоните мне</Button>
             </div>
-            <CallMeBackSetState.Provider
-              value={(bool: boolean) => setAllow(bool)}
-            >
-              <CheckboxBlock>
-                <p>
-                  Я согласен на обработку своих персональных данных согласно
-                  <a href="#"> политике конфиденциальности </a>
-                </p>
-              </CheckboxBlock>
-            </CallMeBackSetState.Provider>
+            <CheckboxBlock setAllow={setAllow}>
+              <p>
+                Я согласен на обработку своих персональных данных согласно
+                <a href="#"> политике конфиденциальности </a>
+              </p>
+            </CheckboxBlock>
           </form>
         </div>
         <div className={style.picture}></div>
@@ -52,6 +46,3 @@ export const CallMeBack: React.FC = (): JSX.Element => {
     </section>
   );
 };
-
-export const CallMeBackSetState = createContext<Function | null>(null);
-export const CallMeBackGetState = createContext<boolean>(true);
