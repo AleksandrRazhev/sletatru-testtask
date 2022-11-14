@@ -9,6 +9,7 @@
   background: #fff;
   box-shadow: $boxShadow1;
   border-radius: $mainBorderRadius;
+  transition: gap 0.5s ease-in-out;
 }
 
 .touristDataClosed {
