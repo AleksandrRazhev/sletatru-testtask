@@ -26,4 +26,7 @@ mobilefirst 320+
 	Open Sans SemiBold 600 (60)
 	Open Sans Bold 700 (22)
 	Open Sans ExtraBold 800(3)
-	
+
+перевести пиксели в rem
+анимация дропдауна: добавить скорости и не схлопывать инпуты
+переписать форму с использованием fieldset
