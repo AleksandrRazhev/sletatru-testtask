@@ -1,4 +1,6 @@
-export const SearchImg: React.FC = (): JSX.Element => {
+export const SearchImg: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

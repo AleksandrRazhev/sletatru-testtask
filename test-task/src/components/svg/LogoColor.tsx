@@ -1,4 +1,6 @@
-export const LogoColor: React.FC = (): JSX.Element => {
+export const LogoColor: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="158"

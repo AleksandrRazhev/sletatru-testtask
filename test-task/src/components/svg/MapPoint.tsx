@@ -1,4 +1,6 @@
-export const MapPoint: React.FC = (): JSX.Element => {
+export const MapPoint: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="16"

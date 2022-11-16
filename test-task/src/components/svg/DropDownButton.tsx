@@ -1,4 +1,6 @@
-export const DropDownButton: React.FC = (): JSX.Element => {
+export const DropDownButton: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="14"

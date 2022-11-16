@@ -1,4 +1,6 @@
-export const Group: React.FC = (): JSX.Element => {
+export const Group: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="16"

@@ -1,4 +1,6 @@
-export const CheckboxChecked: React.FC = (): JSX.Element => {
+export const CheckboxChecked: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="8"

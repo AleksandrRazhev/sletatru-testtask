@@ -1,4 +1,3 @@
-import { Search } from "../Search/Search";
 import style from "./MainScreen.module.scss";
 
 export const MainScreen: React.FC = (): JSX.Element => {

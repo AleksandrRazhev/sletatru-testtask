@@ -1,4 +1,6 @@
-export const LogoWhite: React.FC = (): JSX.Element => {
+export const LogoWhite: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="82"

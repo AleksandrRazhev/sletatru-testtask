@@ -8,12 +8,14 @@ interface CheckboxBlockProps {
   setAllow?: Function;
 }
 
-export const CheckboxBlock = (props: CheckboxBlockProps): JSX.Element => {
-  const { setAllow } = props;
+export const CheckboxBlock: React.FC<CheckboxBlockProps> = ({
+  setAllow,
+  children,
+}): JSX.Element => {
   return (
     <div data-selector="checkbox-block" className={style.textBlock}>
       <Checkbox setAllow={setAllow} />
-      {props.children}
+      {children}
     </div>
   );
 };

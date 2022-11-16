@@ -1,4 +1,6 @@
-export const Burger: React.FC = (): JSX.Element => {
+export const Burger: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="20"

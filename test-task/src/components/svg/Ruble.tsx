@@ -1,4 +1,6 @@
-export const Ruble: React.FC = (): JSX.Element => {
+export const Ruble: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="10"

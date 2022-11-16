@@ -10,9 +10,11 @@ interface TouristDataProps {
   closed: boolean;
 }
 
-export const TouristData = (props: TouristDataProps): JSX.Element => {
-  const { title, data, closed } = props;
-
+export const TouristData: React.FC<TouristDataProps> = ({
+  title,
+  data,
+  closed,
+}): JSX.Element => {
   const [state, setState] = useState(closed);
 
   const onOpen = () => {

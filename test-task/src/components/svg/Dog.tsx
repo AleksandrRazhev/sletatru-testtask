@@ -1,4 +1,4 @@
-export const Dog: React.FC = (): JSX.Element => {
+export const Dog: React.FC<React.SVGProps<SVGSVGElement>> = (): JSX.Element => {
   return (
     <svg
       width="14"

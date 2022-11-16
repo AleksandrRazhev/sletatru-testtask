@@ -1,4 +1,6 @@
-export const Clock: React.FC = (): JSX.Element => {
+export const Clock: React.FC<
+  React.SVGProps<SVGSVGElement>
+> = (): JSX.Element => {
   return (
     <svg
       width="16"

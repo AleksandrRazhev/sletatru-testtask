@@ -1,4 +1,4 @@
-export const VK: React.FC = (): JSX.Element => {
+export const VK: React.FC<React.SVGProps<SVGSVGElement>> = (): JSX.Element => {
   return (
     <svg width="18" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
